@@ -1,15 +1,10 @@
 package com.example.task3peoplemvvm.viewmodel;
-
-
 import android.content.Context;
 import android.view.View;
-
 import androidx.databinding.BaseObservable;
-
 import com.example.task3peoplemvvm.model.People;
 
 public class ItemPeopleViewModel extends BaseObservable {
-
     private final Context context;
     private People people;
 

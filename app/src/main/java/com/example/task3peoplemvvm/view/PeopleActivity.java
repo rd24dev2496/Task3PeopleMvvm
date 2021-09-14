@@ -3,6 +3,7 @@ import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
 import android.view.Menu;
+import android.view.MenuItem;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.databinding.DataBindingUtil;
 import androidx.recyclerview.widget.RecyclerView;
@@ -20,10 +21,9 @@ public class PeopleActivity extends AppCompatActivity implements Observer {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         initDataBinding();
-     //   setSupportActionBar(binding.toolbar);
+     // setSupportActionBar(binding.toolbar);
         setupListPeopleView(binding.recyclerPeople);
         setupObserver(peopleViewModel);
-        setContentView(R.layout.people_activity);
     }
     private void initDataBinding() {
         binding = DataBindingUtil.setContentView(this, R.layout.people_activity);
@@ -48,8 +48,16 @@ public class PeopleActivity extends AppCompatActivity implements Observer {
         getMenuInflater().inflate(R.menu.main, menu);
         return true;
     }
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        if (item.getItemId() == R.id.menu_github) {
+            startActivityActionView();
+            return true;
+        }
+        return super.onOptionsItemSelected(item);
+    }
     private void startActivityActionView() {
-        startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse(PeopleFactory.RANDOM_USER_URL)));
+        startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse(PeopleFactory.PROJECT_URL)));
     }
     @Override
     public void update(Observable observable, Object data) {

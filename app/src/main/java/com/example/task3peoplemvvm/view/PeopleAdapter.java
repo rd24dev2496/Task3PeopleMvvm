@@ -21,10 +21,8 @@ public class PeopleAdapter extends RecyclerView.Adapter<PeopleAdapter.PeopleAdap
     }
     @NonNull
     @Override
-    public PeopleAdapter.PeopleAdapterViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-       ItemPeopleBinding itemPeopleBinding=
-               DataBindingUtil.inflate(LayoutInflater.from(parent.getContext()), R.layout.item_people,parent,false);
-
+    public PeopleAdapterViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
+       ItemPeopleBinding itemPeopleBinding= DataBindingUtil.inflate(LayoutInflater.from(parent.getContext()), R.layout.item_people,parent,false);
         return new PeopleAdapterViewHolder(itemPeopleBinding);
     }
 
@@ -45,7 +43,6 @@ public class PeopleAdapter extends RecyclerView.Adapter<PeopleAdapter.PeopleAdap
 
     public static class PeopleAdapterViewHolder extends RecyclerView.ViewHolder {
         ItemPeopleBinding binding;
-
         PeopleAdapterViewHolder(ItemPeopleBinding binding) {
             super(binding.itemPeople);
             this.binding = binding;

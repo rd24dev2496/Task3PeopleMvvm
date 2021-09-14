@@ -8,6 +8,7 @@ public class PeopleFactory {
 
     private final static String BASE_URL = "https://api.randomuser.me/";
     public final static String RANDOM_USER_URL = "https://api.randomuser.me/?results=10&nat=en";
+    public final static String PROJECT_URL ="https://github.com/rd24dev2496/Task2PeopleMvvm";
 
     public static PeopleService create() {
         Retrofit retrofit = new Retrofit.Builder().baseUrl(BASE_URL)
