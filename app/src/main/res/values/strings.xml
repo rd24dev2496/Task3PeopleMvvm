@@ -1,0 +1,6 @@
+<resources>
+    <string name="app_name">Task3PeopleMvvm</string>
+    <string name="error_loading_people">There seems to have been some error.</string>
+
+    <string name="people_mvvm">People Mvvm</string>
+</resources>
