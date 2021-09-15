@@ -29,7 +29,17 @@ private Picture picture;
 
 private String fullName;
 
-public String getGender() {
+private  Location city;
+
+        public Location getCity() {
+                return city;
+        }
+
+        public void setCity(Location city) {
+                this.city = city;
+        }
+
+        public String getGender() {
         return gender;
         }
 

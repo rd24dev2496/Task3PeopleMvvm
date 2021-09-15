@@ -16,7 +16,6 @@ import com.example.task3peoplemvvm.viewmodel.PeopleDetailViewModel;
 public class PeopleDetailActivity extends AppCompatActivity {
     private static final String EXTRA_PEOPLE = "EXTRA_PEOPLE";
 
-
     private PeopleDetailActivityBinding binding;
 
     @Override protected void onCreate(Bundle savedInstanceState) {

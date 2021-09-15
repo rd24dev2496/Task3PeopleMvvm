@@ -2,10 +2,13 @@ package com.example.task3peoplemvvm.viewmodel;
 
 import android.view.View;
 
+import com.example.task3peoplemvvm.model.Location;
 import com.example.task3peoplemvvm.model.People;
 
 public class PeopleDetailViewModel {
     private final People people;
+    Location location;
+
 
     public PeopleDetailViewModel(People people) {
         this.people = people;
@@ -46,5 +49,8 @@ public class PeopleDetailViewModel {
     public String getGender() {
         return people.getGender();
     }
-
+    public  String  getCity()
+    {
+        return people.getLocation().getCity();
+    }
 }

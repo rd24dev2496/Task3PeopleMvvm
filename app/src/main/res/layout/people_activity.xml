@@ -9,6 +9,7 @@
     </data>
     <androidx.coordinatorlayout.widget.CoordinatorLayout
         android:layout_width="match_parent"
+        android:onClick="@{mainViewModel::onClickFabLoad}"
         android:layout_height="match_parent">
 
 
@@ -38,23 +39,24 @@
                 android:id="@+id/recycler_people"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
+                android:padding="5dp"
                 android:clipToPadding="false"
                 android:scrollbars="vertical"
                 app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
                 app:layout_behavior="@string/appbar_scrolling_view_behavior"
                 app:visibility="@{mainViewModel.peopleRecycler}"
                 tools:listitem="@layout/item_people"/>
-
-
         </LinearLayout>
-
-        <com.google.android.material.floatingactionbutton.FloatingActionButton
-            android:id="@+id/fab"
+<!--
+        <Button
+            android:id="@+id/btn_OnClick"
+            android:layout_margin="15dp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="bottom|end"
+            android:text="Fetch Data"
             android:onClick="@{mainViewModel::onClickFabLoad}"
-            android:src="@drawable/ic_baseline_add_24"/>
+            android:src="@drawable/ic_baseline_add_24"/>-->
 
     </androidx.coordinatorlayout.widget.CoordinatorLayout>
 

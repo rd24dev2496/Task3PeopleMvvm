@@ -73,11 +73,33 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:orientation="vertical">
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="5dp">
+
+                            <ImageView
+                                android:id="@+id/image_name"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:src="@drawable/ic_baseline_person_outline_24" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerVertical="true"
+                                android:layout_marginStart="14dp"
+                                android:layout_toEndOf="@+id/image_name"
+                                android:text="@{peopleDetailViewModel.fullUserName}" />
+
+
+                        </RelativeLayout>
 
 
                         <RelativeLayout
                             android:layout_width="match_parent"
-                            android:layout_height="wrap_content">
+                            android:layout_height="wrap_content"
+                            android:layout_margin="5dp">
 
                             <ImageView
                                 android:id="@+id/image_user"
@@ -98,13 +120,14 @@
 
                         <RelativeLayout
                             android:layout_width="match_parent"
-                            android:layout_height="wrap_content">
+                            android:layout_height="wrap_content"
+                            android:layout_margin="5dp">
 
                             <ImageView
                                 android:id="@+id/image_phone"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:src="@drawable/ic_person_24" />
+                                android:src="@drawable/ic_baseline_phone_iphone_24" />
 
                             <TextView
                                 android:layout_width="wrap_content"
@@ -119,13 +142,14 @@
 
                         <RelativeLayout
                             android:layout_width="match_parent"
-                            android:layout_height="wrap_content">
+                            android:layout_height="wrap_content"
+                            android:layout_margin="5dp">
 
                             <ImageView
                                 android:id="@+id/image_mail"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:src="@drawable/ic_person_24" />
+                                android:src="@drawable/ic_baseline_email_24" />
 
                             <TextView
                                 android:layout_width="wrap_content"
@@ -139,12 +163,35 @@
 
                         </RelativeLayout>
 
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="5dp">
+
+                            <ImageView
+                                android:id="@+id/image_city"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:src="@drawable/ic_baseline_location_city_24" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerVertical="true"
+                                android:layout_marginStart="14dp"
+                                android:layout_toEndOf="@+id/image_city"
+                                android:text="@{peopleDetailViewModel.city}" />
+
+
+                        </RelativeLayout>
+
 
                     </LinearLayout>
                 </androidx.cardview.widget.CardView>
 
 
                 <androidx.cardview.widget.CardView
+                    android:layout_margin="5dp"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     app:cardBackgroundColor="@android:color/white"
@@ -168,7 +215,7 @@
                                 android:id="@+id/image_home"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:src="@drawable/ic_person_24" />
+                                android:src="@drawable/ic_baseline_female_24" />
 
                             <TextView
                                 android:layout_width="wrap_content"
@@ -189,7 +236,7 @@
                                 android:id="@+id/image_gender"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:src="@drawable/ic_person_24" />
+                                android:src="@drawable/ic_baseline_house_24" />
 
                             <TextView
                                 android:layout_width="wrap_content"
@@ -201,6 +248,8 @@
 
 
                         </RelativeLayout>
+
+
 
                     </LinearLayout>
                 </androidx.cardview.widget.CardView>
