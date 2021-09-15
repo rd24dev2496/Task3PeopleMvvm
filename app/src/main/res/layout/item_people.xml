@@ -11,6 +11,8 @@
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:background="@color/teal_200"
         android:id="@+id/item_people"
         android:onClick="@{peopleViewModel::onItemClick}">
 
@@ -19,6 +21,8 @@
             android:id="@+id/image_people"
             android:layout_width="80dp"
             android:layout_height="80dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
             app:imageUrl="@{peopleViewModel.pictureProfile}"/>
 
         <TextView
@@ -31,7 +35,7 @@
             android:textColor="@android:color/primary_text_light"
             android:textSize="16sp"
             android:textStyle="bold"
-            tools:text="mr gary allen"/>
+            tools:text="mr rishabh"/>
 
         <TextView
             android:id="@+id/label_phone"
@@ -42,7 +46,7 @@
             android:text="@{peopleViewModel.cell}"
             android:textColor="@android:color/secondary_text_light"
             android:textSize="14sp"
-            tools:text="0729-256-147"/>
+            tools:text="08660231017"/>
 
         <TextView
             android:id="@+id/label_mail"
@@ -53,7 +57,7 @@
             android:text="@{peopleViewModel.mail}"
             android:textColor="@android:color/secondary_text_light"
             android:textSize="14sp"
-            tools:text="gary.allen@example.com"/>
+            tools:text="dev24@gmail.com"/>
 
     </RelativeLayout>
 </layout>

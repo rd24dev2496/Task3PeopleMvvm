@@ -1,19 +1,14 @@
 package com.example.task3peoplemvvm;
-
 import android.content.Context;
-
 import androidx.multidex.MultiDexApplication;
-
 import com.example.task3peoplemvvm.data.PeopleFactory;
 import com.example.task3peoplemvvm.data.PeopleService;
-
 import io.reactivex.Scheduler;
 import io.reactivex.schedulers.Schedulers;
 
 public class PeoplesApplication extends MultiDexApplication {
     private PeopleService peopleService;
     private Scheduler scheduler;
-
     private  static  PeoplesApplication get(Context context)
     {
       return  (PeoplesApplication) context.getApplicationContext();

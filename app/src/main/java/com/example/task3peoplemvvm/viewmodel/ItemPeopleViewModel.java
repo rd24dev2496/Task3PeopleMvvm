@@ -3,6 +3,7 @@ import android.content.Context;
 import android.view.View;
 import androidx.databinding.BaseObservable;
 import com.example.task3peoplemvvm.model.People;
+import com.example.task3peoplemvvm.view.PeopleDetailActivity;
 
 public class ItemPeopleViewModel extends BaseObservable {
     private final Context context;
@@ -30,7 +31,7 @@ public class ItemPeopleViewModel extends BaseObservable {
     }
 
     public void onItemClick(View view) {
-     //   context.startActivity(PeopleDetailActivity.launchDetail(view.getContext(), people));
+    context.startActivity(PeopleDetailActivity.launchDetail(view.getContext(), people));
     }
 
     public void setPeople(People people) {
